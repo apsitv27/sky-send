@@ -18,7 +18,7 @@ interface FileDropZoneProps {
 export const FileDropZone: React.FC<FileDropZoneProps> = ({
   files,
   onFilesChange,
-  maxSize = 10 * 1024 * 1024, // 10MB
+  maxSize = 4.5 * 1024 * 1024, // 4.5MB
   acceptedTypes = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png', '.zip', '.rar']
 }) => {
   const [error, setError] = useState<string>('');
@@ -30,7 +30,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
     if (rejectedFiles.length > 0) {
       const rejection = rejectedFiles[0];
       if (rejection.errors[0]?.code === 'file-too-large') {
-        setError(`File too large. Maximum size is ${Math.round(maxSize / (1024 * 1024))}MB`);
+        setError(`File too large. Maximum size is 4.5MB`);
       } else if (rejection.errors[0]?.code === 'file-invalid-type') {
         setError('Invalid file type. Please upload PDF, DOC, IMG, or ZIP files.');
       }
@@ -78,7 +78,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
       <label className="text-sm font-medium text-foreground flex items-center gap-2">
         📎 Attach Files
         <span className="text-xs text-muted-foreground">
-          (Max {Math.round(maxSize / (1024 * 1024))}MB each)
+          (Max 4.5MB each)
         </span>
       </label>
 
@@ -99,7 +99,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
               {isDragActive ? 'Drop files here...' : 'Click to upload or drag and drop'}
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              PDF, DOC, IMG, ZIP (MAX {Math.round(maxSize / (1024 * 1024))}MB)
+              PDF, DOC, IMG, ZIP (MAX 4.5MB)
             </p>
           </div>
         </div>

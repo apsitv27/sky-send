@@ -4,12 +4,12 @@ import { EmailFileSharing } from '@/components/EmailFileSharing';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="h-screen relative overflow-hidden flex items-center justify-center">
       {/* Animated background */}
       <AnimatedBackground />
       
       {/* Main content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
+      <div className="relative z-10 w-full max-w-md mx-auto p-4">
         <EmailFileSharing />
       </div>
     </div>
