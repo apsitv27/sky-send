@@ -61,7 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				glass: {
+					DEFAULT: 'hsl(var(--glass))',
+					border: 'hsl(var(--glass-border))',
+					highlight: 'hsl(var(--glass-highlight))'
+				},
+				gradient: {
+					start: 'hsl(var(--gradient-start))',
+					end: 'hsl(var(--gradient-end))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)))',
+				'gradient-background': 'linear-gradient(180deg, hsl(var(--gradient-background-start)), hsl(var(--gradient-background-end)))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
