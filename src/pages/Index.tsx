@@ -9,7 +9,7 @@ const Index = () => {
       <AnimatedBackground />
       
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-sm mx-auto scale-90">
+      <div className="relative z-10 w-full max-w-sm mx-auto scale-80">
         <EmailFileSharing />
       </div>
     </div>
