@@ -50,20 +50,9 @@ export const EmailFileSharing: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-          Email File Sharing
-        </h1>
-        <div className="flex items-center justify-center gap-2 text-glass-highlight">
-          <h2 className="text-xl font-medium">Share Files via Email</h2>
-        </div>
-        <p className="text-muted-foreground mt-2">Fast and secure file delivery</p>
-      </div>
-
+    <div className="w-full max-w-md mx-auto">
       {/* Main card */}
-      <div className="glass-card rounded-3xl p-8 space-y-6">
+      <div className="glass-card rounded-2xl p-6 space-y-5">
         {/* Email recipients */}
         <EmailChips 
           emails={emails} 
@@ -72,7 +61,7 @@ export const EmailFileSharing: React.FC = () => {
         />
 
         {/* Message field */}
-        <div className="space-y-3">
+        <div className="space-y-2">
           <label className="text-sm font-medium text-foreground flex items-center gap-2">
             <MessageSquare className="h-4 w-4" />
             Message (Optional)
@@ -96,19 +85,12 @@ export const EmailFileSharing: React.FC = () => {
         <Button
           onClick={handleSend}
           disabled={!canSend || isLoading}
-          className="w-full gradient-button text-white font-semibold py-3 rounded-xl text-lg"
+          className="w-full gradient-button text-white font-semibold py-3 rounded-xl"
           size="lg"
         >
           <Send className="mr-2 h-5 w-5" />
           {isLoading ? 'Sending Files...' : 'Send Files'}
         </Button>
-
-        {/* Footer */}
-        <div className="text-center pt-4 border-t border-glass-border">
-          <p className="text-xs text-muted-foreground">
-            © 2025 Email File Sharing • Elegant UI Design
-          </p>
-        </div>
       </div>
     </div>
   );
